@@ -68,6 +68,8 @@ function hitsWindowPT(isoStart) {
   const endMin = startMin + 180; // 3h
   const windowStart = 17 * 60; // 5:00 PM
   const windowEnd = 20 * 60; // 8:00 PM (exclusive)
+
+  // Overlaps window if it starts before windowEnd AND ends after windowStart
   return startMin < windowEnd && endMin > windowStart;
 }
 
